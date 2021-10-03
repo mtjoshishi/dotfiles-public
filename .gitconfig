@@ -9,7 +9,7 @@
     autocrlf = false
     # prevent character bug in Japanese
     quotepath = false
-    pager = LC_ALL = ja_JP.UTF-8 less -Sx4
+    pager = LC_ALL=ja_JP.UTF-8 less -Sx4
     ignorecase = false
     # ignore the eol character as '^M'
     whitespace = cr-at-eol
