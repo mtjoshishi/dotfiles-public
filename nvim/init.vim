@@ -83,6 +83,10 @@ set incsearch
 set wrapscan
 set hlsearch
 
+" plugins
+" =======
+runtime ./plugins.vim
+
 " shortcut keymap
 nnoremap <ESC><ESC> :nohlsearch<CR><ESC> 
 nnoremap j gj

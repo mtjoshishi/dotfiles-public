@@ -1,0 +1,28 @@
+# general plugins (managers, colorscheme etc.)
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add = '''
+    syntax enable
+    set background=dark
+    colorscheme iceberg
+    " enable 24-bit color
+    set termguicolors
+'''
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = '''
+    let g:lightline = {
+        \ 'colorscheme': 'iceberg',
+        \ }
+'''
+
+[[plugins]]
+repo = 'maximbaz/lightline-ale'
+depends = ['dense-analysis/ale', 'itchyny/lightline.vim']
