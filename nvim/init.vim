@@ -104,3 +104,11 @@ vmap <Leader>P "+P
 " Visual line mode
 nmap <Leader><Leader> V
 
+" if the swapfile exists, open in read-only mode
+" ----------------------------------------------
+" ref1: https://itchyny.hatenablog.com/entry/2014/12/25/090000
+" ref2: https://github.com/uhooi/dotfiles/blob/3faeacc294a0244c38ea4a1350d52ad0fe8b2674/.vim/config/basics.vim 
+augroup swapchoise_readonly
+    autocmd!
+    autocmd SwapExists * let v:swapchoice = 'o'
+augroup END
