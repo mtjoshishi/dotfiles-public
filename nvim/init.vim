@@ -30,6 +30,8 @@ set cursorcolumn
 set virtualedit=onemore
 set visualbell
 set showmatch
+" cursor move time <time> * 0.1 sec.
+set matchtime=1
 set laststatus=2
 set cmdheight=1
 set wildmode=list:longest
