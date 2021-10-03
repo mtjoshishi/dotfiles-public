@@ -1,0 +1,34 @@
+[include]
+    # include the user files (do not upload to remote!)
+    path = ~/.gitconfig.local
+[init]
+    defaultBranch = main
+[core]
+    editor = nvim
+    # newline code: client is CRLF, server: user oriented
+    autocrlf = false
+    # prevent character bug in Japanese
+    quotepath = false
+    pager = LC_ALL = ja_JP.UTF-8 less -Sx4
+    ignorecase = false
+    # ignore the eol character as '^M'
+    whitespace = cr-at-eol
+    excludesfile = ~/.gitignore
+# convert sjis, cp932 to utf-8 when git diff and git show excecuted
+[diff "cp932"]
+    textconv = iconv -f cp932 -t utf-8
+[diff "sjis"]
+    textconv = iconv -f sjis -t utf-8
+[gui]
+    encoding = utf-8
+[color]
+    ui = auto
+[alias]
+    # display the log-tree
+    tree = log --graph --all --format=\"%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(green reverse)%d%Creset %s\"
+[diff]
+    renames = true
+[merge]
+    ff = false
+[pull]
+    ff = only
