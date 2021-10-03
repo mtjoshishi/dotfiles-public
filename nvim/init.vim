@@ -104,6 +104,10 @@ vmap <Leader>P "+P
 " Visual line mode
 nmap <Leader><Leader> V
 
+" yank to eol in a line
+" ref: https://itchyny.hatenablog.com/entry/2014/12/25/090000
+nnoremap Y y$
+
 " if the swapfile exists, open in read-only mode
 " ----------------------------------------------
 " ref1: https://itchyny.hatenablog.com/entry/2014/12/25/090000
