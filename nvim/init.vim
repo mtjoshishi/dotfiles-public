@@ -96,3 +96,9 @@ augroup swapchoise_readonly
     autocmd!
     autocmd SwapExists * let v:swapchoice = 'o'
 augroup END
+
+" Config for path of python
+" -------------------------
+if has("win32")
+    let g:python3_host_prog = '~\AppData\Local\Programs\Python\Python310\python.exe'
+endif
