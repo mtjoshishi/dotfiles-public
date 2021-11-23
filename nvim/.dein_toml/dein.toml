@@ -26,3 +26,42 @@ hook_add = '''
 [[plugins]]
 repo = 'maximbaz/lightline-ale'
 depends = ['dense-analysis/ale', 'itchyny/lightline.vim']
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+depends = ['defx-git', 'defx-icons']
+hook_add = '''
+    source ~/.config/nvim/.plugged/defx.rc.vim
+'''
+
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'
+hook_add = '''
+    source ~/.config/nvim/.plugged/lsp_config.rc.vim
+'''
+
+[[plugins]]
+repo = 'hrsh7th/nvim-cmp'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-nvim-lsp'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-buffer'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-cmdline'
+
+[[plugins]]
+repo = 'L3MON4D3/LuaSnip'
+
+
