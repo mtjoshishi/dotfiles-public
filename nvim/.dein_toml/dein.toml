@@ -68,6 +68,12 @@ repo = 'hrsh7th/cmp-cmdline'
 repo = 'L3MON4D3/LuaSnip'
 
 [[plugins]]
+repo = 'onsails/lspkind-nvim'
+hook_add = '''
+    source ~/.config/nvim/.plugged/lspkind.rc.lua
+'''
+
+[[plugins]]
 repo = 'windwp/nvim-autopairs'
 hook_add = '''
     source ~/.config/nvim/.plugged/autopairs.rc.lua
