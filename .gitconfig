@@ -32,3 +32,5 @@
     ff = false
 [pull]
     ff = only
+[commit]
+    gpgsign = true
