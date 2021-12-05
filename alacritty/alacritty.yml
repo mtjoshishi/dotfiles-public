@@ -1,3 +1,7 @@
+# Shell
+shell:
+  program: /usr/bin/zsh
+
 # Colors (Iceberg Dark)
 colors:
   # Default colors
