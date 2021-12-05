@@ -1,6 +1,9 @@
 # Shell
 shell:
   program: /usr/bin/zsh
+  args:
+    - -c
+    - "/usr/bin/tmux a -t 0 || /usr/bin/tmux"
 
 # Colors (Iceberg Dark)
 colors:
