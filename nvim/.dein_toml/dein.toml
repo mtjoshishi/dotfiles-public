@@ -74,6 +74,9 @@ hook_add = '''
 '''
 
 [[plugins]]
+repo = 'simrat39/rust-tools.nvim'
+
+[[plugins]]
 repo = 'windwp/nvim-autopairs'
 hook_add = '''
     source ~/.config/nvim/.plugged/autopairs.rc.lua
