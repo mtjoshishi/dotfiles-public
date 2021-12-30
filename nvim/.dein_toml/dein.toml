@@ -82,3 +82,22 @@ hook_add = '''
     source ~/.config/nvim/.plugged/autopairs.rc.lua
 '''
 
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+hook_add = '''
+    let g:loaded_telescope = 1
+    source ~/.config/nvim/.plugged/telescope.rc.vim
+'''
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+hook_add = '''
+    let g:loaded_nvim_treesitter = 1
+    source ~/.config/nvim/.plugged/treesitter.rc.vim
+'''
+hook_post_update = '''
+    TSUpdate
+'''
