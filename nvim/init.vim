@@ -22,7 +22,7 @@ set hidden
 " show the command
 set showcmd
 " enable that yank to clipboard
-set clipboard+=unnamed
+set clipboard+=unnamedplus
 set title
 set number
 set cursorline
