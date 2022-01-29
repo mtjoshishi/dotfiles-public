@@ -101,6 +101,17 @@ augroup END
 
 " Config for path of python
 " -------------------------
+" If the vertual environment (.venv) exists, the path of python3 is set to that.
 if has("win32")
-    let g:python3_host_prog = '~\AppData\Local\Programs\Python\Python310\python.exe'
+    if exists("$VIRTUAL_ENV")
+        let g:python3_host_prog = $VIRTUAL_ENV.'\Scripts\python.exe'
+    else
+        let g:python3_host_prog = '~\AppData\Local\Programs\Python\Python310\python.exe'
+    endif
+else
+    if exists("$VIRTUAL_ENV")
+        let g:python3_host_prog = $VIRTUAL_ENV.'/bin/python3'
+    else
+        let g:python3_host_prog = system("which python3")
+    endif
 endif
