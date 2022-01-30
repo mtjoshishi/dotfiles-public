@@ -94,10 +94,9 @@ hook_add = '''
 
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
-hook_add = '''
+merged = 0
+hook_source = '''
     let g:loaded_nvim_treesitter = 1
     source ~/.config/nvim/.plugged/treesitter.rc.vim
 '''
-hook_post_update = '''
-    TSUpdate
-'''
+hook_post_update = 'TSUpdate'
