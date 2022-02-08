@@ -112,6 +112,6 @@ else
     if exists("$VIRTUAL_ENV")
         let g:python3_host_prog = $VIRTUAL_ENV.'/bin/python3'
     else
-        let g:python3_host_prog = system("which python3")
+        let g:python3_host_prog = system('which python3 | tr -d "\n"')
     endif
 endif
