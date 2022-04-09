@@ -67,6 +67,7 @@ if has("autocmd")
     autocmd FileType bash   setlocal sw=2 sts=2 ts=2 et
     autocmd FileType zsh    setlocal sw=2 sts=2 ts=2 et
     autocmd FileType cmake  setlocal sw=2 sts=2 ts=2 et
+    autocmd FileType make   setlocal sw=8 sts=0 noet
 endif
 
 " font
