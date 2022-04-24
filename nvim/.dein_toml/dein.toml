@@ -100,3 +100,7 @@ hook_source = '''
     source ~/.config/nvim/.plugged/treesitter.rc.vim
 '''
 hook_post_update = 'TSUpdate'
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
