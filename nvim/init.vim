@@ -120,6 +120,10 @@ endif
 " Enable format-on-save for clang.
 function! Formatonsave()
     let l:formatdiff = 1
-    pyf /usr/share/clang/clang-format.py
+    if has("win32")
+        pyf C:/Program Files/LLVM/share/clang-format.py
+    else
+        pyf /usr/share/clang/clang-format.py
+    endif
 endfunction
 autocmd BufWritePre *.h,*.hpp,*.cc,*.cpp call Formatonsave()

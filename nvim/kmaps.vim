@@ -34,5 +34,10 @@ nnoremap - <C-x>
 nnoremap Y y$
 
 " clang-format's keymap
-map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
-imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<cr>
+if has("win32")
+    map <C-K> :pyf C:/Program Files/LLVM/share/clang-format.py<cr>
+    imap <C-K> :pyf C:/Program Files/LLVM/share/clang-format.py<cr>
+else
+    map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
+    imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<cr>
+endif
