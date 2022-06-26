@@ -32,3 +32,7 @@ nnoremap - <C-x>
 " yank to eol in a line
 " ref: https://itchyny.hatenablog.com/entry/2014/12/25/090000
 nnoremap Y y$
+
+" clang-format's keymap
+map <C-K> :pyf /usr/share/clang/clang-format.py<cr>
+imap <C-K> <c-o>:pyf /usr/share/clang/clang-format.py<cr>

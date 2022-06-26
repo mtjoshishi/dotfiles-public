@@ -116,3 +116,10 @@ else
         let g:python3_host_prog = system('which python3 | tr -d "\n"')
     endif
 endif
+
+" Enable format-on-save for clang.
+function! Formatonsave()
+    let l:formatdiff = 1
+    pyf /usr/share/clang/clang-format.py
+endfunction
+autocmd BufWritePre *.h,*.hpp,*.cc,*.cpp call Formatonsave()
