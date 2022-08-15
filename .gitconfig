@@ -31,6 +31,7 @@
 [merge]
     ff = false
 [pull]
+    rebase = true
     ff = only
 [commit]
     gpgsign = true
