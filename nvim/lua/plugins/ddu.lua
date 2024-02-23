@@ -30,7 +30,7 @@ return {
       "ryota2357/ddu-column-icon_filename",
     },
     init = function()
-      nmap(";f", "<Cmd>Ddu file_external<CR>")
+      nmap(";f", "<Cmd>Ddu file_external -ui-param-ff-startAutoAction=v:true<CR>")
       nmap(";h", "<Cmd>Ddu help<CR>")
       nmap(";rg", "<Cmd>Ddu -name=grep<CR>")
       nmap(";b", [[<Cmd>Ddu -name=filer -searchPath=`expand('%:p')`<CR>]])
@@ -40,7 +40,7 @@ return {
         local top = 4
         local current_width = vim.opt.columns:get()
         local current_height = vim.opt.lines:get()
-        local ddu_window_width = math.floor(current_width * 0.5)
+        local ddu_window_width = math.floor(current_width * 0.8)
         local ddu_window_height = math.floor(current_height * 0.5)
 
         vim.fn["ddu#custom#patch_global"]({
@@ -52,27 +52,39 @@ return {
               winCol = math.floor((current_width - ddu_window_width) / 2),
               winRow = top,
               startFilter = true,
+              prompt = "> ",
               split = "floating",
               floatingBorder = "single",
               floatingTitle = "File Explorer",
-              floatingTitlePos = "center",
+              autoAction = {
+                name = "preview",
+              },
               previewFloating = true,
               previewFloatingBorder = "single",
+              previewFloatingTitle = "Preview",
               previewSplit = "vertical",
               previewWidth = math.floor(ddu_window_width * 0.5),
-              previewHeight = ddu_window_height - 2,
-              previewCol = math.floor(current_width / 2) - 2,
-              previewRow = top + 1,
+              previewHeight = ddu_window_height,
+              previewCol = math.floor(current_width / 2),
+              previewRow = top,
               filterSplitDirection = "floating",
               filterFloatingPosition = "top",
               autoResize = false,
               ignoreEmpty = false,
+              highlights = {
+                floating = "Normal",
+                floatingBorder = "Normal",
+              },
             },
           },
           sourceOptions = {
             _ = {
               ignoreCase = true,
               matchers = { "matcher_substring" },
+            },
+            file_external = {
+              sorters = { "sorter_alpha" },
+              columns = { "icon_filename" },
             },
           },
           sourceParams = {
