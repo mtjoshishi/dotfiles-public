@@ -17,7 +17,7 @@ return {
       -- Source
       "Shougo/ddu-source-file",
       "matsui54/ddu-source-file_external",
-      "Shougo/ddu-source-rg",
+      "shun/ddu-source-rg",
       "matsui54/ddu-source-help",
       -- Kind
       "Shougo/ddu-kind-file",
