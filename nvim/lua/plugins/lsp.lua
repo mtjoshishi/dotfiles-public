@@ -73,6 +73,7 @@ return {
         "ltex",
         "pyright",
         "typos_lsp",
+        "zls",
       },
       automatic_installation = true
     },
