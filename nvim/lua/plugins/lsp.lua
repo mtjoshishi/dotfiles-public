@@ -9,6 +9,8 @@ return {
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",
       "Shougo/ddc-source-lsp",
+      -- Java language server (jdtls)
+      "mfussenegger/nvim-jdtls",
     },
     config = function()
       require("lspconfig.ui.windows").default_options.border = "single"
@@ -66,6 +68,7 @@ return {
         "gopls",
         "html",
         "htmx",
+        "jdtls",
         "jsonls",
         "ltex",
         "pyright",
@@ -87,5 +90,17 @@ return {
         },
       },
     },
-  }
+  },
+  {
+    "mfussenegger/nvim-jdtls",
+    config = function()
+      local jdtls_cfg = {
+        cmd = { "jdtls" },
+        root_dir = vim.fs.dirname(
+          vim.fs.find({"gradlew", ".git", "mvnw"}, { upward = true })[1]
+        ),
+      }
+      require("jdtls").start_or_attach(jdtls_cfg)
+    end,
+  },
 }
