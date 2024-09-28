@@ -57,7 +57,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     opts = {
       ensure_installed = {
-        "tsserver",
+        "ts_ls",
         "denols",
         "lua_ls",
         "yamlls",
