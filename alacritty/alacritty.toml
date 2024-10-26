@@ -49,7 +49,7 @@ action = "SpawnNewInstance"
 key = "Return"
 mods = "Control|Shift"
 
-[shell]
+[terminal.shell]
 args = ["-c", "/usr/bin/tmux a -t 0 || /usr/bin/tmux"]
 program = "/usr/bin/zsh"
 
