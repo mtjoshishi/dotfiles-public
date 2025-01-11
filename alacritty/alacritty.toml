@@ -26,22 +26,22 @@ foreground = "#d2d4de"
 TERM = "alacritty"
 
 [font]
-size = 12
+size = 11
 
 [font.bold]
-family = "BlexMono NF"
+family = "BlexMono Nerd Font Mono"
 style = "Bold"
 
 [font.bold_italic]
-family = "BlexMono NF"
+family = "BlexMono Nerd Font Mono"
 style = "Bold Italic"
 
 [font.italic]
-family = "BlexMono NF"
+family = "BlexMono Nerd Font Mono"
 style = "Italic"
 
 [font.normal]
-family = "BlexMono NF"
+family = "BlexMono Nerd Font Mono"
 style = "Text"
 
 [[keyboard.bindings]]
