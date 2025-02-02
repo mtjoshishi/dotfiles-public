@@ -16,9 +16,9 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  -- First of all, install the LazyVim and import theire plugins.
+  -- First of all, install the LazyVim and import their plugins.
   spec = {
-    { import = "plugins"}
+    { import = "plugins" }
   },
   defaults = {
     lazy = true,
