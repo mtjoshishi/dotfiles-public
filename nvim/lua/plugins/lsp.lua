@@ -53,6 +53,7 @@ return {
   },
   {
     "williamboman/mason-lspconfig.nvim",
+    version = "^1.0.0",
     opts = {
       ensure_installed = {
         "ts_ls",
@@ -77,6 +78,7 @@ return {
   },
   {
     "williamboman/mason.nvim",
+    version = "^1.0.0",
     build = ":MasonUpdate",
     opts = {
       ui = {
