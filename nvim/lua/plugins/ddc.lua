@@ -40,10 +40,10 @@ return {
           mark = "[A]",
         },
         lsp = {
+          isVolatile = true,
           mark = "[LSP]",
           keywordPattern = "[a-zA-Z0-9_À-ÿ$#\\-*]*",
           forceCompletionPattern = [["\.\w*|:\w*|->\w*"]],
-          sorters = { "sorter_lsp-kind", "sorter_fuzzy" },
         }
       })
 
