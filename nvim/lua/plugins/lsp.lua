@@ -6,8 +6,8 @@ return {
     "neovim/nvim-lspconfig",
     event = "BufReadPre",
     dependencies = {
-      "williamboman/mason.nvim",
-      "williamboman/mason-lspconfig.nvim",
+      "mason-org/mason.nvim",
+      "mason-org/mason-lspconfig.nvim",
       "Shougo/ddc-source-lsp",
     },
     config = function()
@@ -19,18 +19,10 @@ return {
         title = "hover",
       })
 
-      require("mason").setup()
-      require("mason-lspconfig").setup()
-
-      local lspconfig = require("lspconfig")
       local ddc_source_lsp = require("ddc_source_lsp")
       local ddc_capabilities = ddc_source_lsp.make_client_capabilities()
 
-      require("mason-lspconfig").setup_handlers({
-        function(server)
-          lspconfig[server].setup({ capabilities = ddc_capabilities })
-        end
-      })
+      vim.lsp.config('*', { capabilities = ddc_capabilities, })
 
       -- Keymaps
       vim.api.nvim_create_autocmd("LspAttach", {
@@ -52,8 +44,7 @@ return {
     end,
   },
   {
-    "williamboman/mason-lspconfig.nvim",
-    version = "^1.0.0",
+    "mason-org/mason-lspconfig.nvim",
     opts = {
       ensure_installed = {
         "ts_ls",
@@ -75,10 +66,13 @@ return {
       },
       automatic_installation = true
     },
+    dependencies = {
+      { "mason-org/mason.nvim", },
+      "neovim/nvim-lspconfig",
+    },
   },
   {
-    "williamboman/mason.nvim",
-    version = "^1.0.0",
+    "mason-org/mason.nvim",
     build = ":MasonUpdate",
     opts = {
       ui = {
