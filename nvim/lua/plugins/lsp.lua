@@ -62,6 +62,7 @@ return {
         "ltex",
         "pyright",
         "typos_lsp",
+        "rust_analyzer",
         "zls",
       },
       automatic_installation = true
