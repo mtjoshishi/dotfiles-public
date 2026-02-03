@@ -14,7 +14,7 @@
     # ignore the eol character as '^M'
     whitespace = cr-at-eol
     excludesfile = ~/.gitignore
-# convert sjis, cp932 to utf-8 when git diff and git show excecuted
+# convert sjis, cp932 to utf-8 when git diff and git show executed
 [diff "cp932"]
     textconv = iconv -f cp932 -t utf-8
 [diff "sjis"]
