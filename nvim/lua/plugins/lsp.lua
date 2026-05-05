@@ -12,12 +12,7 @@ return {
     },
     config = function()
       require("lspconfig.ui.windows").default_options.border = "single"
-      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-        vim.lsp.handlers.hover, {
-        -- Use a sharp border with 'FloatBorder' highlishgts
-        border = "single",
-        title = "hover",
-      })
+      vim.lsp.buf.hover({ border = "single", title = "hover" })
 
       local ddc_source_lsp = require("ddc_source_lsp")
       local ddc_capabilities = ddc_source_lsp.make_client_capabilities()
