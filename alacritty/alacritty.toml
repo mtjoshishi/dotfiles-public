@@ -29,20 +29,20 @@ TERM = "alacritty"
 size = 11
 
 [font.bold]
-family = "BlexMono Nerd Font Mono"
+family = "Moralerspace Argon HWJPDOC"
 style = "Bold"
 
 [font.bold_italic]
-family = "BlexMono Nerd Font Mono"
+family = "Moralerspace Argon HWJPDOC"
 style = "Bold Italic"
 
 [font.italic]
-family = "BlexMono Nerd Font Mono"
+family = "Moralerspace Argon HWJPDOC"
 style = "Italic"
 
 [font.normal]
-family = "BlexMono Nerd Font Mono"
-style = "Text"
+family = "Moralerspace Argon HWJPDOC"
+style = "Regular"
 
 [[keyboard.bindings]]
 action = "SpawnNewInstance"
