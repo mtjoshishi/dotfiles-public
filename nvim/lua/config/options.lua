@@ -7,13 +7,14 @@ vim.opt.fileencodings = { "utf-8", "cp932", "euc-jp" }
 vim.opt.fileformats = { "unix", "dos" }
 
 vim.opt.title = true
+vim.opt.termguicolors = true
 vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 vim.opt.virtualedit = "onemore"
 vim.opt.visualbell  = true
 vim.opt.cmdheight = 1
-vim.opt.backup = false 
+vim.opt.backup = false
 vim.opt.swapfile = false
 vim.opt.hidden = true -- Turn off the 'unsaved' warning when switch the buffer.
 vim.opt.autoread = true
