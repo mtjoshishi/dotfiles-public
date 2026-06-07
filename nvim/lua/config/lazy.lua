@@ -25,7 +25,7 @@ require("lazy").setup({
     -- Always use the latest commit of git.
     version = false
   },
-  install = { colorscheme = { "iceberg" } },
+  install = { colorscheme = { "catppuccin" } },
   checker = { enabled = true },
   performance = {
     cache = { enabled = true },
