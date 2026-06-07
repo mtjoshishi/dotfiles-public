@@ -8,16 +8,11 @@ return {
     dependencies = {
       "mason-org/mason.nvim",
       "mason-org/mason-lspconfig.nvim",
-      "Shougo/ddc-source-lsp",
+      "saghen/blink.cmp",
     },
     config = function()
       require("lspconfig.ui.windows").default_options.border = "single"
       vim.lsp.buf.hover({ border = "single", title = "hover" })
-
-      local ddc_source_lsp = require("ddc_source_lsp")
-      local ddc_capabilities = ddc_source_lsp.make_client_capabilities()
-
-      vim.lsp.config('*', { capabilities = ddc_capabilities, })
 
       -- Keymaps
       vim.api.nvim_create_autocmd("LspAttach", {
