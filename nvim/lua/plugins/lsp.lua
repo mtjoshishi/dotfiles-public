@@ -8,6 +8,7 @@ return {
     dependencies = {
       "mason-org/mason.nvim",
       "mason-org/mason-lspconfig.nvim",
+      "saghen/blink.cmp",
     },
     config = function()
       require("lspconfig.ui.windows").default_options.border = "single"
