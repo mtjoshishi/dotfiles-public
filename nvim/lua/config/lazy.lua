@@ -21,7 +21,7 @@ require("lazy").setup({
     { import = "plugins" }
   },
   defaults = {
-    lazy = true,
+    lazy = false,
     -- Always use the latest commit of git.
     version = false
   },
