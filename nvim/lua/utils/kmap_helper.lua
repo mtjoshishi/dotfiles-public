@@ -13,4 +13,4 @@ for _, mode in pairs({ 'n', 'v', 'i', 'o', 'c', 't', 'x', 't' }) do
   end
 end
 
-return { keymaps = keymaps, array_map = array_map, }
+return { keymaps = keymaps }
