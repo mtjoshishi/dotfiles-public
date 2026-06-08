@@ -1,5 +1,11 @@
 return {
   {
+    -- Automatically compensate brackets
+    "nvim-mini/mini.pairs",
+    version = "*",
+    config = true,
+  },
+  {
     -- Code formatter
     "stevearc/conform.nvim",
     opts = {},

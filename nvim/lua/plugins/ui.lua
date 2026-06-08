@@ -13,14 +13,9 @@ return {
       "nvim-tree/nvim-web-devicons",
     },
     keys = {
-      { "<Tab>", "<cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
+      { "<Tab>",   "<cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
       { "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
     },
-    config = true,
-  },
-  {
-    "nvim-mini/mini.pairs",
-    version = "*",
     config = true,
   },
   {
@@ -38,11 +33,11 @@ return {
           },
         },
         presets = {
-          bottom_search = true, -- use a classic bottom cmdline for search
-          command_palette = true, -- position the cmdline and popupmenu together
+          bottom_search = true,         -- use a classic bottom cmdline for search
+          command_palette = true,       -- position the cmdline and popupmenu together
           long_message_to_split = true, -- long messages will be sent to a split
-          inc_rename = false, -- enables an input dialog for inc-rename.nvim
-          lsp_doc_border = true, -- add a border to hover docs and signature help
+          inc_rename = false,           -- enables an input dialog for inc-rename.nvim
+          lsp_doc_border = true,        -- add a border to hover docs and signature help
         },
       })
     end
@@ -54,11 +49,19 @@ return {
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
       vim.keymap.set("n", ";e", "<cmd>NvimTreeToggle<CR>",
-                     { silent = true, desc = "nvim-tree: Toggle",
-                       noremap = true, nowait = true })
+        {
+          silent = true,
+          desc = "nvim-tree: Toggle",
+          noremap = true,
+          nowait = true
+        })
       vim.keymap.set("n", ";f", "<cmd>NvimTreeFindFileToggle<CR>",
-                     { silent = true, desc = "nvim-tree: Find file",
-                       noremap = true, nowait = true })
+        {
+          silent = true,
+          desc = "nvim-tree: Find file",
+          noremap = true,
+          nowait = true
+        })
 
       local function my_on_attach(bufnr)
         local api = require("nvim-tree.api")
@@ -98,4 +101,3 @@ return {
     end
   },
 }
-
