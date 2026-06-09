@@ -19,6 +19,19 @@ return {
     config = true,
   },
   {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    keys = {
+      { [[<C-\>]], mode = { 'n', 't' }, desc = "Toggle Terminal" },
+    },
+    opts = {
+      open_mapping = [[<C-\>]],
+      direction = "horizontal",
+      size = 20,
+    },
+    config = true,
+  },
+  {
     "folke/noice.nvim",
     event = "VeryLazy",
     dependencies = {
